@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Task Manager</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="shell">
+  <header class="hero">
+    <div><p class="eyebrow">STUDENT PRODUCTIVITY</p><h1>Student Task Manager</h1>
+    <p class="subtitle">Plan your work, track your progress, and stay on top of deadlines.</p></div>
+    <div class="hero-mark">STM</div>
+  </header>
+  <section class="stats">
+    <article class="stat-card"><span>Total tasks</span><strong id="totalCount">0</strong></article>
+    <article class="stat-card"><span>In progress</span><strong id="progressCount">0</strong></article>
+    <article class="stat-card"><span>Completed</span><strong id="completedCount">0</strong></article>
+  </section>
+  <section class="panel">
+    <div class="section-heading"><div><p class="eyebrow">GET ORGANIZED</p><h2>Add a task</h2></div></div>
+    <form id="taskForm">
+      <label for="title">Task title</label><input id="title" name="title" maxlength="100" placeholder="e.g. Prepare for database exam" required>
+      <label for="description">Description <span>(optional)</span></label>
+      <textarea id="description" name="description" rows="3" maxlength="500" placeholder="Add a few details..."></textarea>
+      <button type="submit">＋ Add task</button><p id="formMessage" class="message" role="status"></p>
+    </form>
+  </section>
+  <section class="tasks-section">
+    <div class="section-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h2>My tasks</h2></div>
+      <select id="filter" aria-label="Filter tasks"><option>All</option><option>Pending</option><option>In Progress</option><option>Completed</option></select>
+    </div>
+    <div id="taskList" class="task-list"><p class="empty">Loading tasks...</p></div>
+  </section>
+  <footer>Student Task Manager · Built with Node.js and Express</footer>
+</main><script src="/script.js"></script>
+</body></html>

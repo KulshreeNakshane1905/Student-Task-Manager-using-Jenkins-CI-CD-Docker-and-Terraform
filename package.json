@@ -1,0 +1,9 @@
+{
+  "name": "student-task-manager",
+  "version": "1.0.0",
+  "description": "Student Task Manager for Jenkins CI/CD and Terraform practice",
+  "main": "server.js",
+  "scripts": {"start": "node server.js", "test": "node --test"},
+  "dependencies": {"express": "^4.21.2"},
+  "engines": {"node": ">=20"}
+}
